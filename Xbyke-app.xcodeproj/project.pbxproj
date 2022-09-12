@@ -101,12 +101,8 @@
 		AA87AC2928CEFE8D00F0948A /* Xbyke-app */ = {
 			isa = PBXGroup;
 			children = (
-				AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */,
-				AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */,
-				AA87AC2E28CEFE8D00F0948A /* ViewController.swift */,
-				AA87AC3028CEFE8D00F0948A /* Main.storyboard */,
-				AA87AC3628CEFE8E00F0948A /* Assets.xcassets */,
-				AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */,
+				AA87AC6228CEFF7700F0948A /* Components */,
+				AA87AC5E28CEFF3F00F0948A /* Module */,
 				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AA87AC3328CEFE8D00F0948A /* Xbyke_app.xcdatamodeld */,
 			);
@@ -128,6 +124,42 @@
 				AA87AC5028CEFE8F00F0948A /* Xbyke_appUITestsLaunchTests.swift */,
 			);
 			path = "Xbyke-appUITests";
+			sourceTree = "<group>";
+		};
+		AA87AC5D28CEFF3500F0948A /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				AA87AC6128CEFF6B00F0948A /* View */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		AA87AC5E28CEFF3F00F0948A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				AA87AC5D28CEFF3500F0948A /* OnBoarding */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		AA87AC6128CEFF6B00F0948A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA87AC2E28CEFE8D00F0948A /* ViewController.swift */,
+				AA87AC3028CEFE8D00F0948A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA87AC6228CEFF7700F0948A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */,
+				AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */,
+				AA87AC3628CEFE8E00F0948A /* Assets.xcassets */,
+				AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
