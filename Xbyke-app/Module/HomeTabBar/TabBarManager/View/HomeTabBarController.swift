@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeTabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

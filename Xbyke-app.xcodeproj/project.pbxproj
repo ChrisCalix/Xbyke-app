@@ -67,7 +67,7 @@
 		AA87AC3428CEFE8D00F0948A /* Xbyke_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xbyke_app.xcdatamodel; sourceTree = "<group>"; };
 		AA87AC3628CEFE8E00F0948A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA87AC3928CEFE8E00F0948A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AA87AC3B28CEFE8E00F0948A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA87AC3B28CEFE8E00F0948A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Utils/Info.plist; sourceTree = "<group>"; };
 		AA87AC4028CEFE8F00F0948A /* Xbyke-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC4A28CEFE8F00F0948A /* Xbyke-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC4E28CEFE8F00F0948A /* Xbyke_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xbyke_appUITests.swift; sourceTree = "<group>"; };
@@ -152,6 +152,7 @@
 		AA87AC2928CEFE8D00F0948A /* Xbyke-app */ = {
 			isa = PBXGroup;
 			children = (
+				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AAD23F7528CF3502004048CA /* Components */,
 				AA87AC6228CEFF7700F0948A /* Utils */,
 				AA87AC5E28CEFF3F00F0948A /* Module */,
@@ -206,7 +207,6 @@
 				AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */,
 				AA87AC3628CEFE8E00F0948A /* Assets.xcassets */,
 				AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */,
-				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AA87AC6528CF01C400F0948A /* Enums.swift */,
 				AAD23F6B28CF1F4F004048CA /* Observable.swift */,
 				AAD23F7B28CF3768004048CA /* UIView+Extension.swift */,
@@ -357,7 +357,6 @@
 				E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */,
 				5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -738,6 +737,7 @@
 				DEVELOPMENT_TEAM = R96V6F8ZCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xbyke-app/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to access your location?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
@@ -767,6 +767,7 @@
 				DEVELOPMENT_TEAM = R96V6F8ZCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xbyke-app/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to access your location?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
