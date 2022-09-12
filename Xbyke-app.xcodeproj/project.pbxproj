@@ -14,6 +14,8 @@
 		AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */; };
 		AA6ABD9E28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */; };
 		AA6ABD9F28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */; };
+		AA6ABDA428CFE3AB0005A4D7 /* CurrentRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */; };
+		AA6ABDA728CFE97F0005A4D7 /* TrackerRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */; };
 		AA76ACDA28CFB85E0055933B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACD928CFB85E0055933B /* CoreDataStack.swift */; };
 		AA76ACDC28CFBB790055933B /* ColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACDB28CFBB790055933B /* ColorTransformer.swift */; };
 		AA76ACE328CFBCAA0055933B /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */; };
@@ -70,6 +72,8 @@
 		AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteModel.swift; sourceTree = "<group>"; };
 		AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteTableViewCell.swift; sourceTree = "<group>"; };
 		AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackerRouteTableViewCell.xib; sourceTree = "<group>"; };
+		AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewModel.swift; sourceTree = "<group>"; };
+		AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteViewModel.swift; sourceTree = "<group>"; };
 		AA76ACD928CFB85E0055933B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AA76ACDB28CFBB790055933B /* ColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransformer.swift; sourceTree = "<group>"; };
 		AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "Xbyke-app/Track+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -147,6 +151,22 @@
 				AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AA6ABDA228CFE3990005A4D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA6ABDA528CFE9710005A4D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AA76ACD828CFB8350055933B /* CoreData */ = {
@@ -356,6 +376,7 @@
 		AAD38F0E28CF696E00444FC6 /* CurrentRide */ = {
 			isa = PBXGroup;
 			children = (
+				AA6ABDA228CFE3990005A4D7 /* ViewModel */,
 				AAD38F0F28CF697E00444FC6 /* View */,
 			);
 			path = CurrentRide;
@@ -372,6 +393,7 @@
 		AAD38F1228CF6DED00444FC6 /* MyProgress */ = {
 			isa = PBXGroup;
 			children = (
+				AA6ABDA528CFE9710005A4D7 /* ViewModel */,
 				AA6ABD9928CFCC800005A4D7 /* Model */,
 				AAD38F1328CF6E0F00444FC6 /* View */,
 			);
@@ -582,7 +604,9 @@
 				AA76ACDA28CFB85E0055933B /* CoreDataStack.swift in Sources */,
 				AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */,
 				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
+				AA6ABDA728CFE97F0005A4D7 /* TrackerRouteViewModel.swift in Sources */,
 				AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */,
+				AA6ABDA428CFE3AB0005A4D7 /* CurrentRideViewModel.swift in Sources */,
 				AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */,
 				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,
 				AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */,

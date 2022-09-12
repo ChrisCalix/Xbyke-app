@@ -10,6 +10,7 @@ import CoreData
 
 class MyProgressViewController: UIViewController {
     var routes = [TrackerRouteModel]()
+    var viewModel: TrackerRouteViewModel = TrackerRouteViewModel()
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -21,36 +22,24 @@ class MyProgressViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewBind()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
         loadTrackedRoutes()
     }
 
     func loadTrackedRoutes() {
-        let appleDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appleDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Track")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
+        viewModel.fetchGetData()
+    }
 
-            routes = result.map { item -> TrackerRouteModel in
-                let res = (item as? NSManagedObject)
-                return TrackerRouteModel(distance: res?.value(forKey: "distance") as? String,
-                                         endaddress: res?.value(forKey: "endaddress") as? String,
-                                         startaddress: res?.value(forKey: "startaddress") as? String,
-                                         time: res?.value(forKey: "time") as? String)
+    func initViewBind() {
+        viewModel.response.bind { routes in
+            guard let routes = routes else {
+                return
             }
-
-            for route in routes {
-                print("route \(route.distance)")
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-
-
-        } catch {
-            print("failed error load")
+            self.routes = routes
+            self.tableView.reloadData()
         }
     }
 

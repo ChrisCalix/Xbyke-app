@@ -50,12 +50,12 @@ class CurrentRideViewController: UIViewController {
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
 
     var tracksPath = [Track]()
+    var viewModel: CurrentRideViewModel? = CurrentRideViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        initViewBind()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTrackerCard))
-
-
         locationManager = CLLocationManager()
         locationManager.delegate = self
         self.mapView.isMyLocationEnabled = true
@@ -66,6 +66,15 @@ class CurrentRideViewController: UIViewController {
         checkLocatoinAuthorizationStatus(from: locationManager, started: false)
     }
 
+    func initViewBind() {
+        viewModel?.response.bind({ state in
+            DispatchQueue.main.async {
+                self.storeStack.isHidden = true
+                self.confirmationView.isHidden = false
+            }
+
+        })
+    }
 
     @objc func addTrackerCard() {
         if timerCard.isHidden {
@@ -74,8 +83,6 @@ class CurrentRideViewController: UIViewController {
             timeStoreLabel.text = "00:00:00"
         }
     }
-
-
 
     func runTimer() {
 
@@ -111,27 +118,16 @@ class CurrentRideViewController: UIViewController {
     }
 
     @IBAction func didPressedStore(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-
-        let entity = NSEntityDescription.entity(forEntityName: "Track", in: context)
-        let newTrack = NSManagedObject(entity: entity!, insertInto: context)
-        newTrack.setValue(self.distanceLabel.text, forKey: "distance")
-        newTrack.setValue(self.timeStoreLabel.text, forKey: "time")
         getAddressFromLatLon(location: currentLocations.first!) { addresFirst in
             self.getAddressFromLatLon(location: self.currentLocations.last!) { adressLast in
-                newTrack.setValue(adressLast, forKey: "endaddress")
-                newTrack.setValue(addresFirst, forKey: "startaddress")
-                do {
-                    try context.save()
-                } catch {
-                    print("error saving")
-                }
+                let routetrack = TrackerRouteModel(distance: self.distanceLabel.text,
+                                                   endaddress: adressLast,
+                                                   startaddress: addresFirst,
+                                                   time: self.timeStoreLabel.text)
+                self.viewModel?.fetchSaveData(routeTracked: routetrack)
             }
         }
 
-        storeStack.isHidden = true
-        confirmationView.isHidden = false
     }
 
     
@@ -194,11 +190,10 @@ class CurrentRideViewController: UIViewController {
             manager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
             if started {
-                self.locationManager.startUpdatingLocation()
                 presstrackRoute = true
                 runTimer()
             }
-
+            self.locationManager.startUpdatingLocation()
             self.locationManager.startUpdatingHeading()
 
         default:
