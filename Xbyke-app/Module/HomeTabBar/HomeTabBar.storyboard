@@ -245,8 +245,28 @@
                                                     <constraint firstAttribute="bottom" secondItem="bLN-Tn-0j8" secondAttribute="bottom" id="vk0-Ci-zLF"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-UW-E3x">
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zM5-sZ-M2I">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="260"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your progress has been correctly stored!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-PU-XmW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="220"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRZ-Mw-uE1">
+                                                        <rect key="frame" x="0.0" y="220" width="0.0" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="qRi-O1-bD1"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="OK"/>
+                                                        <connections>
+                                                            <action selector="didPressedStoreOk:" destination="egW-xN-pFq" eventType="touchUpInside" id="vFM-MB-asK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -278,12 +298,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Current Ride" id="ohn-dd-JIX"/>
                     <connections>
+                        <outlet property="confirmationView" destination="zM5-sZ-M2I" id="0uf-fM-JWO"/>
                         <outlet property="distanceLabel" destination="qYF-6u-AiN" id="d3i-TB-CZb"/>
                         <outlet property="mapView" destination="dvQ-0q-Rae" id="fFI-b5-doP"/>
                         <outlet property="startBtn" destination="yz0-gL-mZd" id="vkL-91-iII"/>
                         <outlet property="stopBtn" destination="4WF-Ux-QuE" id="fjw-0C-hgR"/>
                         <outlet property="storeCard" destination="GjL-6k-1S7" id="rVd-sc-03G"/>
-                        <outlet property="storeStack" destination="Dji-Y5-z0e" id="Ca8-OJ-kwn"/>
+                        <outlet property="storeStack" destination="Iha-Na-Mo7" id="CVR-pu-N3w"/>
                         <outlet property="timeLabel" destination="MUV-LO-scF" id="rlk-Ue-c3w"/>
                         <outlet property="timeStoreLabel" destination="byi-a6-U9A" id="tlu-mo-XMs"/>
                         <outlet property="timerCard" destination="hNj-vI-gIf" id="329-uY-djb"/>

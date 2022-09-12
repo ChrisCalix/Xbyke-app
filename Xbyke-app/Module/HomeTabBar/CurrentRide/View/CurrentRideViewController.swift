@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import CoreData
 
 class CurrentRideViewController: UIViewController {
 
@@ -27,6 +28,7 @@ class CurrentRideViewController: UIViewController {
             storeCard.layer.shadowOffset = CGSize(width: 3, height: 3)
         }
     }
+    @IBOutlet weak var confirmationView: UIView!
     @IBOutlet weak var storeStack: UIStackView!
 
     @IBOutlet weak var timerCard: UIView! {
@@ -45,6 +47,8 @@ class CurrentRideViewController: UIViewController {
     var seconds = 0 //This variable will hold a starting value of seconds. It could be any amount above 0.
     var timer = Timer()
     var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
+
+    var tracksPath = [Track]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,7 +110,24 @@ class CurrentRideViewController: UIViewController {
     }
 
     @IBAction func didPressedStore(_ sender: Any) {
-        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let entity = NSEntityDescription.entity(forEntityName: "Track", in: context)
+        let newTrack = NSManagedObject(entity: entity!, insertInto: context)
+        newTrack.setValue(distanceLabel.text, forKey: "distance")
+        newTrack.setValue("Av.asd", forKey: "endaddress")
+        newTrack.setValue("Av. asdf", forKey: "startaddress")
+        newTrack.setValue(timeStoreLabel.text, forKey: "time")
+        do {
+            try context.save()
+
+        } catch {
+            print("error saving")
+        }
+
+        storeStack.isHidden = true
+        confirmationView.isHidden = false
     }
 
     @IBAction func didPressedDelete(_ sender: Any) {
@@ -114,6 +135,15 @@ class CurrentRideViewController: UIViewController {
         paths.removeAllCoordinates()
         seconds = 0
         storeCard.isHidden = true
+    }
+
+    @IBAction func didPressedStoreOk(_ sender: Any) {
+        mapView.clear()
+        paths.removeAllCoordinates()
+        seconds = 0
+        storeCard.isHidden = true
+        storeStack.isHidden = false
+        confirmationView.isHidden = true
     }
 
     func checkLocatoinAuthorizationStatus(from manager: CLLocationManager, started: Bool) {
@@ -151,6 +181,7 @@ extension CurrentRideViewController: CLLocationManagerDelegate {
             mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17.0)
 
             if presstrackRoute {
+                currentLocations.append(location)
                 paths.add(location.coordinate)
 
                 if let lastLocation = lastLocation {
