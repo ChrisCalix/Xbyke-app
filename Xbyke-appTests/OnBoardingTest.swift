@@ -11,7 +11,7 @@ import XCTest
 class OnBoardingTest: XCTestCase {
 
     func test_init_has_non_zero_pages() {
-        let controllers = makeSUT().viewControllers
+        let controllers = makeSUT().viewModel?.orderedViewControllers.value
         XCTAssertNotNil(controllers)
         XCTAssertFalse(controllers!.isEmpty)
     }
@@ -26,14 +26,16 @@ class OnBoardingTest: XCTestCase {
 
     func test_viewdidload_withMoreThanZeroPages_set_initial_view_controller() {
         let orderedViewControllers = initOnBoardingPagesViewControllers()
-        let sut = makeSUT()
-
-        XCTAssertEqual(sut.viewModel?.orderedViewControllers.value?.count, orderedViewControllers.count)
+        let sut = makeSUT(controllers: orderedViewControllers)
+        XCTAssertEqual(sut.viewModel?.orderedViewControllers.value, orderedViewControllers)
     }
 
     func test_next_view_controller_page_index() {
-        let sut = makeSUT()
-        XCTAssertNotNil(nextController(at: sut, from: firstController(at: sut)!))
+        let orderedViewControllers = initOnBoardingPagesViewControllers()
+        let sut = makeSUT(controllers: orderedViewControllers)
+        
+        let controller = orderedViewControllers[0]
+        XCTAssertNotNil(nextController(at: sut, from: controller ))
     }
 
     func test_previous_view_controller_page_index() {

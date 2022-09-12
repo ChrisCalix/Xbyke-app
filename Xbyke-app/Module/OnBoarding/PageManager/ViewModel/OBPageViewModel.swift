@@ -18,7 +18,10 @@ class OBPageViewModel: OBPageViewModelProtocol {
 
     init(screens: [OnBoardingScreen]) {
         self.orderedViewControllers = Observable(screens.map({
-            UIStoryboard(name: "OnBoarding", bundle: nil).instantiateViewController(withIdentifier: $0.viewControllerName)
+            let controller = UIStoryboard(name: "OnBoarding", bundle: nil).instantiateViewController(withIdentifier: $0.viewControllerName) as! PageItemController
+            let viewModel = PageItemViewModel(screen: $0)
+            controller.configure(viewModel: viewModel)
+            return controller
         }))
     }
 

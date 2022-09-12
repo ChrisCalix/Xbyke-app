@@ -16,120 +16,53 @@
             </objects>
             <point key="canvasLocation" x="-728" y="100"/>
         </scene>
-        <!--Use View Controller-->
-        <scene sceneID="XH5-JV-rMq">
+        <!--Page Item Controller-->
+        <scene sceneID="6y2-PF-GsZ">
             <objects>
-                <viewController storyboardIdentifier="OBUseViewController" id="yaI-JU-Ekb" customClass="OBUseViewController" customModule="Xbyke_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Ox-EN-1pQ">
+                <viewController storyboardIdentifier="PageItemController" id="GRc-WV-nAr" customClass="PageItemController" customModule="Xbyke_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uya-S4-r23">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpB-oF-beX" customClass="OnBoardingView" customModule="Xbyke_app" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b08-ew-a1t" customClass="OnBoardingView" customModule="Xbyke_app" customModuleProvider="target">
                                 <rect key="frame" x="70" y="198" width="274" height="500"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbP-3M-4x7">
+                                <rect key="frame" x="70" y="714" width="274" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hpB-oF-beX" secondAttribute="height" multiplier="137:250" id="P4t-0W-Oih"/>
+                                    <constraint firstAttribute="height" constant="40" id="CVV-Kh-ZXz"/>
                                 </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="C5F-hQ-ttd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="hpB-oF-beX" firstAttribute="leading" secondItem="C5F-hQ-ttd" secondAttribute="leading" constant="70" id="Ioj-lN-NKG"/>
-                            <constraint firstItem="C5F-hQ-ttd" firstAttribute="trailing" secondItem="hpB-oF-beX" secondAttribute="trailing" constant="70" id="RUk-2k-VXg"/>
-                            <constraint firstItem="hpB-oF-beX" firstAttribute="centerY" secondItem="6Ox-EN-1pQ" secondAttribute="centerY" id="dE6-eH-qqh"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="onBoarding" destination="hpB-oF-beX" id="sak-up-XVa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XsT-rp-Wds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1514" y="818"/>
-        </scene>
-        <!--Tracker View Controller-->
-        <scene sceneID="7Ux-zv-FsU">
-            <objects>
-                <viewController storyboardIdentifier="OBTrackerViewController" id="fT7-uE-J7f" customClass="OBTrackerViewController" customModule="Xbyke_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KrA-yB-4b8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-zQ-vSy" customClass="OnBoardingView" customModule="Xbyke_app" customModuleProvider="target">
-                                <rect key="frame" x="70" y="198" width="274" height="500"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IcH-zQ-vSy" secondAttribute="height" multiplier="137:250" id="E1X-PW-Ufz"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="j6i-ay-lnq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="IcH-zQ-vSy" firstAttribute="centerY" secondItem="KrA-yB-4b8" secondAttribute="centerY" id="35Q-dD-VRb"/>
-                            <constraint firstItem="IcH-zQ-vSy" firstAttribute="leading" secondItem="j6i-ay-lnq" secondAttribute="leading" constant="70" id="meg-NX-2oE"/>
-                            <constraint firstItem="j6i-ay-lnq" firstAttribute="trailing" secondItem="IcH-zQ-vSy" secondAttribute="trailing" constant="70" id="sC3-A1-3oR"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="onBoarding" destination="IcH-zQ-vSy" id="oiJ-WE-BbV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3iB-Gg-BeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-727" y="818"/>
-        </scene>
-        <!--Progress View Controller-->
-        <scene sceneID="LV7-lV-47X">
-            <objects>
-                <viewController storyboardIdentifier="OBProgressViewController" id="uis-eG-ont" customClass="OBProgressViewController" customModule="Xbyke_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WaW-1I-VdA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-Ms-jQK" customClass="OnBoardingView" customModule="Xbyke_app" customModuleProvider="target">
-                                <rect key="frame" x="70" y="198" width="274" height="500"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uir-XD-nwq">
-                                <rect key="frame" x="70" y="714" width="274" height="31"/>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="GET STARTED!">
+                                <buttonConfiguration key="configuration" style="plain" title="GET STARTED!!">
                                     <color key="baseForegroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="didPressedGetStarted:" destination="uis-eG-ont" eventType="touchUpInside" id="XT8-21-Gbk"/>
-                                </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="TdW-HB-k2i"/>
+                        <viewLayoutGuide key="safeArea" id="gY6-8I-Fc5"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstItem="o5a-Ms-jQK" firstAttribute="leading" secondItem="TdW-HB-k2i" secondAttribute="leading" constant="70" id="0Ej-RV-FNm"/>
-                            <constraint firstItem="TdW-HB-k2i" firstAttribute="trailing" secondItem="o5a-Ms-jQK" secondAttribute="trailing" constant="70" id="FyC-KL-99m"/>
-                            <constraint firstItem="TdW-HB-k2i" firstAttribute="trailing" secondItem="Uir-XD-nwq" secondAttribute="trailing" constant="70" id="LCn-S2-0Dy"/>
-                            <constraint firstItem="Uir-XD-nwq" firstAttribute="top" secondItem="o5a-Ms-jQK" secondAttribute="bottom" constant="16" id="OO0-5i-bRb"/>
-                            <constraint firstItem="Uir-XD-nwq" firstAttribute="leading" secondItem="TdW-HB-k2i" secondAttribute="leading" constant="70" id="RCP-Hu-Dch"/>
-                            <constraint firstItem="o5a-Ms-jQK" firstAttribute="width" secondItem="o5a-Ms-jQK" secondAttribute="height" multiplier="137:250" id="UrD-y4-dk3"/>
-                            <constraint firstItem="o5a-Ms-jQK" firstAttribute="centerY" secondItem="WaW-1I-VdA" secondAttribute="centerY" id="yFX-dv-QB9"/>
+                            <constraint firstItem="fbP-3M-4x7" firstAttribute="leading" secondItem="gY6-8I-Fc5" secondAttribute="leading" constant="70" id="2p7-uK-zd6"/>
+                            <constraint firstItem="b08-ew-a1t" firstAttribute="centerY" secondItem="Uya-S4-r23" secondAttribute="centerY" id="7o5-t0-NfR"/>
+                            <constraint firstItem="fbP-3M-4x7" firstAttribute="top" secondItem="b08-ew-a1t" secondAttribute="bottom" constant="16" id="9Jw-5X-n8A"/>
+                            <constraint firstItem="gY6-8I-Fc5" firstAttribute="trailing" secondItem="b08-ew-a1t" secondAttribute="trailing" constant="70" id="DDH-Xf-9OC"/>
+                            <constraint firstItem="b08-ew-a1t" firstAttribute="width" secondItem="b08-ew-a1t" secondAttribute="height" multiplier="137:250" id="O8Q-xS-47L"/>
+                            <constraint firstItem="b08-ew-a1t" firstAttribute="leading" secondItem="gY6-8I-Fc5" secondAttribute="leading" constant="70" id="TA6-Fc-Cca"/>
+                            <constraint firstItem="gY6-8I-Fc5" firstAttribute="trailing" secondItem="fbP-3M-4x7" secondAttribute="trailing" constant="70" id="caf-tY-LvY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="onboarding" destination="o5a-Ms-jQK" id="ovS-t6-ALX"/>
+                        <outlet property="btnContinue" destination="fbP-3M-4x7" id="lad-xT-8vM"/>
+                        <outlet property="onboarding" destination="b08-ew-a1t" id="pYb-Jd-gBV"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="put-RJ-Yup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vM6-I8-W3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="818"/>
+            <point key="canvasLocation" x="70" y="100"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

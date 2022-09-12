@@ -15,11 +15,11 @@ enum OnBoardingScreen {
     var viewControllerName: String {
         switch self {
         case .simpleToUse:
-            return String(describing: OBUseViewController.self)
+            return String(describing: PageItemController.self)
         case .trackerDistanceTime:
-            return String(describing: OBTrackerViewController.self)
+            return String(describing: PageItemController.self)
         case .progress:
-            return String(describing: OBProgressViewController.self)
+            return String(describing: PageItemController.self)
         }
     }
 

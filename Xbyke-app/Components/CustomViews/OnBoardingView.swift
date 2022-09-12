@@ -18,16 +18,6 @@ class OnBoardingView: UIView {
         super.init(frame: frame)
     }
 
-    init?(frame:CGRect, screen: OnBoardingScreen) {
-        super.init(frame: frame)
-        configureView(screen: screen, radius: frame.width/2)
-    }
-
-    init?(coder: NSCoder, screen: OnBoardingScreen) {
-        super.init(coder: coder)
-        configureView(screen: screen, radius: UIScreen.main.bounds.width)
-    }
-
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
@@ -40,10 +30,13 @@ class OnBoardingView: UIView {
         self.addSubview(view)
     }
 
-    func configureView(screen: OnBoardingScreen, radius: CGFloat) {
-        text.text = screen.textDescription
-        icon.image = UIImage(named: screen.iconName)
+    func configureView(description: String?, iconName: String?, radius: CGFloat) {
         backgroundIcon.layer.cornerRadius = radius
         backgroundIcon.clipsToBounds = true
+        text.text = description
+        guard let iconName = iconName else {
+            return
+        }
+        icon.image = UIImage(named: iconName)
     }
 }
