@@ -20,10 +20,17 @@ class OnBoardingPageViewController: UIPageViewController {
         initUIViews()
     }
 
+    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+        super.init(transitionStyle: .scroll, navigationOrientation: .vertical, options: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
     fileprivate func initUIViews() {
         dataSource = self
         view.backgroundColor = .systemBackground
-
         guard let firstViewController = orderedViewControllers.first else {
             return
         }
