@@ -34,6 +34,7 @@
 		AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */; };
 		AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */; };
 		AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */; };
+		AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabBar.storyboard; sourceTree = "<group>"; };
 		AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
+		AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 		AAD38F0628CF628900444FC6 /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				AAD38F1228CF6DED00444FC6 /* MyProgress */,
 				AAD38F0E28CF696E00444FC6 /* CurrentRide */,
 				AAD38F0728CF629800444FC6 /* TabBarManager */,
 				AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */,
@@ -313,6 +316,22 @@
 			isa = PBXGroup;
 			children = (
 				AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD38F1228CF6DED00444FC6 /* MyProgress */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1328CF6E0F00444FC6 /* View */,
+			);
+			path = MyProgress;
+			sourceTree = "<group>";
+		};
+		AAD38F1328CF6E0F00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +472,7 @@
 				AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */,
 				AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */,
 				AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */,
+				AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */,
 				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
 				AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */,
 				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,

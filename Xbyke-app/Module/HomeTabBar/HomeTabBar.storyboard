@@ -101,7 +101,7 @@
         <!--My Progress-->
         <scene sceneID="h0y-g2-KMR">
             <objects>
-                <viewController storyboardIdentifier="GrayViewController" id="KnZ-bt-d3g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GrayViewController" id="KnZ-bt-d3g" customClass="MyProgressViewController" customModule="Xbyke_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jkD-fx-cOT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
