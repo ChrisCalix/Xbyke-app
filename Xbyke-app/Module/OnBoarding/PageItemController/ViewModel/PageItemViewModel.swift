@@ -23,7 +23,7 @@ class PageItemViewModel {
     }
 
     func isHiddenButton() -> Bool {
-        guard let screen = screen, screen != .progress else {
+        guard let screen = screen, screen == .progress else {
             return true
         }
         return false
