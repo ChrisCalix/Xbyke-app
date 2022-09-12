@@ -14,7 +14,6 @@ class MyProgressViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.delegate = self
             tableView.dataSource = self
             tableView.register(UINib(nibName: "TrackerRouteTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         }
@@ -26,10 +25,6 @@ class MyProgressViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        loadTrackedRoutes()
-    }
-
-    func loadTrackedRoutes() {
         viewModel.fetchGetData()
     }
 
@@ -45,25 +40,3 @@ class MyProgressViewController: UIViewController {
 
 }
 
-extension MyProgressViewController: UITableViewDelegate {
-
-}
-
-extension MyProgressViewController: UITableViewDataSource {
-
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routes.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        //TODO: tthe view
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TrackerRouteTableViewCell
-        cell?.configure(route: routes[indexPath.row])
-        return cell!
-    }
-
-
-
-}

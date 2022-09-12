@@ -13,13 +13,8 @@ import CoreData
 class CurrentRideViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
-    var locationManager: CLLocationManager!
     @IBOutlet weak var timeLabel: UILabel!
-    var currentLocations : [CLLocation] = []
-    var lastLocation : CLLocation?
-    var distanceAccum : Double = 0
     @IBOutlet weak var distanceLabel: UILabel!
-
     @IBOutlet weak var timeStoreLabel: UILabel!
     @IBOutlet weak var storeCard: UIView! {
         didSet {
@@ -31,7 +26,6 @@ class CurrentRideViewController: UIViewController {
     }
     @IBOutlet weak var confirmationView: UIView!
     @IBOutlet weak var storeStack: UIStackView!
-
     @IBOutlet weak var timerCard: UIView! {
         didSet {
             timerCard.layer.cornerRadius = 25
@@ -42,15 +36,19 @@ class CurrentRideViewController: UIViewController {
     }
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
+
     let paths = GMSMutablePath()
     var timeStart : Date?
     var presstrackRoute = false
-    var seconds = 0 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var seconds = 0
     var timer = Timer()
-    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
-
+    var isTimerRunning = false
+    var locationManager: CLLocationManager!
     var tracksPath = [Track]()
     var viewModel: CurrentRideViewModel? = CurrentRideViewModel()
+    var currentLocations : [CLLocation] = []
+    var lastLocation : CLLocation?
+    var distanceAccum : Double = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +70,6 @@ class CurrentRideViewController: UIViewController {
                 self.storeStack.isHidden = true
                 self.confirmationView.isHidden = false
             }
-
         })
     }
 
@@ -85,10 +82,8 @@ class CurrentRideViewController: UIViewController {
     }
 
     func runTimer() {
-
          timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(CurrentRideViewController.updateTimer)), userInfo: nil, repeats: true)
     }
-
 
     @objc func updateTimer() {
         seconds += 1
@@ -108,6 +103,8 @@ class CurrentRideViewController: UIViewController {
             timer.invalidate()
             timerCard.isHidden = true
             storeCard.isHidden = false
+            storeStack.isHidden = false
+            confirmationView.isHidden = true
             if distanceAccum >= 1000 {
                 distanceLabel.text = String(format: "%. 2f", distanceAccum/1000) + " km."
             } else {
@@ -127,10 +124,7 @@ class CurrentRideViewController: UIViewController {
                 self.viewModel?.fetchSaveData(routeTracked: routetrack)
             }
         }
-
     }
-
-    
 
     @IBAction func didPressedDelete(_ sender: Any) {
         mapView.clear()
@@ -154,7 +148,6 @@ class CurrentRideViewController: UIViewController {
         ceo.reverseGeocodeLocation(location, completionHandler:
             {(placemarks, error) in
             guard error == nil else {
-                print("reverse geodcode fail: \(error!.localizedDescription)")
                 completion("")
                 return
             }
@@ -179,7 +172,7 @@ class CurrentRideViewController: UIViewController {
                     addressString = addressString + pm.postalCode! + " "
                 }
                 completion(addressString)
-          }
+            }
         })
     }
 
@@ -195,7 +188,6 @@ class CurrentRideViewController: UIViewController {
             }
             self.locationManager.startUpdatingLocation()
             self.locationManager.startUpdatingHeading()
-
         default:
             break
         }
@@ -209,27 +201,4 @@ class CurrentRideViewController: UIViewController {
     }
 }
 
-extension CurrentRideViewController: CLLocationManagerDelegate {
 
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for location in locations {
-            print("present location : \(location.coordinate.latitude), \(location.coordinate.longitude)")
-            mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17.0)
-
-            if presstrackRoute {
-                currentLocations.append(location)
-                paths.add(location.coordinate)
-
-                if let lastLocation = lastLocation {
-                    distanceAccum += location.distance(from: lastLocation)
-                }
-                lastLocation = location
-
-            }
-            let polyline = GMSPolyline(path: paths)
-            polyline.strokeColor = .red
-            polyline.strokeWidth = 5
-            polyline.map =  presstrackRoute ? mapView : nil
-        }
-    }
-}

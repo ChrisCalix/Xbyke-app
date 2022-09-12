@@ -11,9 +11,7 @@ import CoreData
 class CurrentRideViewModel {
     var response: Observable<Bool> = Observable(false)
 
-
     func fetchSaveData(routeTracked: TrackerRouteModel) {
-
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Track", in: context)
@@ -28,6 +26,5 @@ class CurrentRideViewModel {
             print("error saving")
         }
         response.value = true
-        
     }
 }
