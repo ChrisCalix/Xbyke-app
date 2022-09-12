@@ -9,6 +9,7 @@ import UIKit
 import GoogleMaps
 import CoreData
 
+
 class CurrentRideViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
@@ -115,20 +116,25 @@ class CurrentRideViewController: UIViewController {
 
         let entity = NSEntityDescription.entity(forEntityName: "Track", in: context)
         let newTrack = NSManagedObject(entity: entity!, insertInto: context)
-        newTrack.setValue(distanceLabel.text, forKey: "distance")
-        newTrack.setValue("Av.asd", forKey: "endaddress")
-        newTrack.setValue("Av. asdf", forKey: "startaddress")
-        newTrack.setValue(timeStoreLabel.text, forKey: "time")
-        do {
-            try context.save()
-
-        } catch {
-            print("error saving")
+        newTrack.setValue(self.distanceLabel.text, forKey: "distance")
+        newTrack.setValue(self.timeStoreLabel.text, forKey: "time")
+        getAddressFromLatLon(location: currentLocations.first!) { addresFirst in
+            self.getAddressFromLatLon(location: self.currentLocations.last!) { adressLast in
+                newTrack.setValue(adressLast, forKey: "endaddress")
+                newTrack.setValue(addresFirst, forKey: "startaddress")
+                do {
+                    try context.save()
+                } catch {
+                    print("error saving")
+                }
+            }
         }
 
         storeStack.isHidden = true
         confirmationView.isHidden = false
     }
+
+    
 
     @IBAction func didPressedDelete(_ sender: Any) {
         mapView.clear()
@@ -144,6 +150,41 @@ class CurrentRideViewController: UIViewController {
         storeCard.isHidden = true
         storeStack.isHidden = false
         confirmationView.isHidden = true
+    }
+
+    func getAddressFromLatLon(location: CLLocation, completion: @escaping (String) -> Void) {
+
+        let ceo: CLGeocoder = CLGeocoder()
+        ceo.reverseGeocodeLocation(location, completionHandler:
+            {(placemarks, error) in
+            guard error == nil else {
+                print("reverse geodcode fail: \(error!.localizedDescription)")
+                completion("")
+                return
+            }
+            let pm = placemarks! as [CLPlacemark]
+            var addressString : String = ""
+            if pm.count > 0 {
+                let pm = placemarks!.first!
+
+                if pm.country != nil {
+                    addressString = addressString + pm.country! + ", "
+                }
+                if pm.locality != nil {
+                    addressString = addressString + pm.locality! + ", "
+                }
+                if pm.subLocality != nil {
+                    addressString = addressString + pm.subLocality! + ", "
+                }
+                if pm.thoroughfare != nil {
+                    addressString = addressString + pm.thoroughfare! + ", "
+                }
+                if pm.postalCode != nil {
+                    addressString = addressString + pm.postalCode! + " "
+                }
+                completion(addressString)
+          }
+        })
     }
 
     func checkLocatoinAuthorizationStatus(from manager: CLLocationManager, started: Bool) {

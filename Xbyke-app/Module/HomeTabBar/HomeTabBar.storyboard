@@ -321,13 +321,28 @@
                     <view key="view" contentMode="scaleToFill" id="jkD-fx-cOT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Uj9-TZ-J7c">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Xoa-dd-LsS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xoa-dd-LsS" firstAttribute="bottom" secondItem="Uj9-TZ-J7c" secondAttribute="bottom" id="2Ne-pm-faC"/>
+                            <constraint firstItem="Uj9-TZ-J7c" firstAttribute="top" secondItem="Xoa-dd-LsS" secondAttribute="top" id="8h3-zp-I9L"/>
+                            <constraint firstItem="Xoa-dd-LsS" firstAttribute="trailing" secondItem="Uj9-TZ-J7c" secondAttribute="trailing" id="pPa-s0-eT3"/>
+                            <constraint firstItem="Uj9-TZ-J7c" firstAttribute="leading" secondItem="Xoa-dd-LsS" secondAttribute="leading" id="zRa-bp-2Gs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Cn6-p4-ts6">
                         <color key="badgeColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="My Progress" id="kPK-7C-eqh"/>
+                    <connections>
+                        <outlet property="tableView" destination="Uj9-TZ-J7c" id="FDh-83-6Ud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEU-Hl-A1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
