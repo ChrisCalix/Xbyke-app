@@ -12,7 +12,7 @@ enum OnBoardingScreen {
     case trackerDistanceTime
     case progress
 
-    var viewControllerName : String {
+    var viewControllerName: String {
         switch self {
         case .simpleToUse:
             return String(describing: OBUseViewController.self)
@@ -23,7 +23,27 @@ enum OnBoardingScreen {
         }
     }
 
+    var textDescription: String {
+        switch self {
+        case .simpleToUse:
+            return "Extremely simple to use"
+        case .trackerDistanceTime:
+            return "Track your time and distance"
+        case .progress:
+            return "See your progress and challenge yourself!"
+        }
+    }
 
+    var iconName: String {
+        switch self {
+        case .simpleToUse:
+            return "track"
+        case .trackerDistanceTime:
+            return "distance"
+        case .progress:
+            return "progress"
+        }
+    }
 }
 
 enum PaginationFlowTypes {

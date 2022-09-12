@@ -18,6 +18,11 @@ class OnBoardingView: UIView {
         super.init(frame: frame)
     }
 
+    init?(frame:CGRect, screen: OnBoardingScreen) {
+        super.init(frame: frame)
+        configureView(screen: screen, radius: frame.width/2)
+    }
+
     init?(coder: NSCoder, screen: OnBoardingScreen) {
         super.init(coder: coder)
         configureView(screen: screen, radius: UIScreen.main.bounds.width)
@@ -36,17 +41,8 @@ class OnBoardingView: UIView {
     }
 
     func configureView(screen: OnBoardingScreen, radius: CGFloat) {
-        switch screen {
-        case .simpleToUse:
-            icon.image = UIImage(named: "track")
-            text.text = "Extremely simple to use"
-        case .trackerDistanceTime:
-            icon.image = UIImage(named: "distance")
-            text.text = "Track your time and distance"
-        case .progress:
-            icon.image = UIImage(named: "progress")
-            text.text = "See your progress and challenge yourself!"
-        }
+        text.text = screen.textDescription
+        icon.image = UIImage(named: screen.iconName)
         backgroundIcon.layer.cornerRadius = radius
         backgroundIcon.clipsToBounds = true
     }
