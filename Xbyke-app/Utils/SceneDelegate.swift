@@ -18,18 +18,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let rootViewController = UIStoryboard(name: "OnBoarding", bundle: .main).instantiateViewController(withIdentifier: String(describing: OnBoardingPageViewController.self)) as? OnBoardingPageViewController
+        if UserDefaults.standard.bool(forKey: "HideOnBoarding") {
+
+            let rootViewController = UIStoryboard(name: "HomeTabBar", bundle: .main).instantiateViewController(withIdentifier: String(describing: HomeTabBarController.self)) as? HomeTabBarController
+            window = UIWindow(windowScene: windowScene)
+
+            window?.rootViewController = rootViewController
+
+            window?.makeKeyAndVisible()
+        } else {
+            let rootViewController = UIStoryboard(name: "OnBoarding", bundle: .main).instantiateViewController(withIdentifier: String(describing: OnBoardingPageViewController.self)) as? OnBoardingPageViewController
+            let pageViewModel = OBPageViewModel(screens: [.simpleToUse, .trackerDistanceTime, .progress])
+            rootViewController?.configure(viewModel: pageViewModel)
+            window = UIWindow(windowScene: windowScene)
+
+            window?.rootViewController = rootViewController
+
+            window?.makeKeyAndVisible()
+        }
 
 
-        let pageViewModel = OBPageViewModel(screens: [.simpleToUse, .trackerDistanceTime, .progress])
-        rootViewController?.configure(viewModel: pageViewModel)
-        //let navController = UINavigationController(rootViewController: rootViewController)
 
-        window = UIWindow(windowScene: windowScene)
-
-        window?.rootViewController = rootViewController
-
-        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -60,7 +69,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+      //  (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        (UIApplication.shared.delegate as? AppDelegate)?.coreDataStack.saveContext()
     }
 
 

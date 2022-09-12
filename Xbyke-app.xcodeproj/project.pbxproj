@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BB4B9B90357D27E32B6FB0 /* Pods_Xbyke_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */; };
 		AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */; };
 		AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */; };
 		AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */; };
+		AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */; };
+		AA6ABD9E28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */; };
+		AA6ABD9F28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */; };
+		AA6ABDA428CFE3AB0005A4D7 /* CurrentRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */; };
+		AA6ABDA728CFE97F0005A4D7 /* TrackerRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */; };
+		AA6ABDA928CFEB840005A4D7 /* MyProgressViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDA828CFEB840005A4D7 /* MyProgressViewController+DataSource.swift */; };
+		AA6ABDAB28CFEC430005A4D7 /* CurrentRideViewController+LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABDAA28CFEC430005A4D7 /* CurrentRideViewController+LocationDelegate.swift */; };
+		AA76ACDA28CFB85E0055933B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACD928CFB85E0055933B /* CoreDataStack.swift */; };
+		AA76ACDC28CFBB790055933B /* ColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACDB28CFBB790055933B /* ColorTransformer.swift */; };
+		AA76ACE328CFBCAA0055933B /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */; };
+		AA76ACE428CFBCAA0055933B /* Track+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACE228CFBCAA0055933B /* Track+CoreDataClass.swift */; };
 		AA87AC2B28CEFE8D00F0948A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */; };
 		AA87AC2D28CEFE8D00F0948A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */; };
 		AA87AC3228CEFE8D00F0948A /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA87AC3028CEFE8D00F0948A /* OnBoarding.storyboard */; };
@@ -31,6 +43,10 @@
 		AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F8128CF465E004048CA /* PageItemController.swift */; };
 		AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */; };
 		AAD38F0528CF5AAE00444FC6 /* OBPageItemController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */; };
+		AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */; };
+		AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */; };
+		AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */; };
+		AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +67,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbyke-app.release.xcconfig"; path = "Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app.release.xcconfig"; sourceTree = "<group>"; };
 		AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingTest+Helpers.swift"; sourceTree = "<group>"; };
 		AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+DataSource.swift"; sourceTree = "<group>"; };
 		AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTest.swift; sourceTree = "<group>"; };
+		AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteModel.swift; sourceTree = "<group>"; };
+		AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteTableViewCell.swift; sourceTree = "<group>"; };
+		AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackerRouteTableViewCell.xib; sourceTree = "<group>"; };
+		AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewModel.swift; sourceTree = "<group>"; };
+		AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteViewModel.swift; sourceTree = "<group>"; };
+		AA6ABDA828CFEB840005A4D7 /* MyProgressViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyProgressViewController+DataSource.swift"; sourceTree = "<group>"; };
+		AA6ABDAA28CFEC430005A4D7 /* CurrentRideViewController+LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrentRideViewController+LocationDelegate.swift"; sourceTree = "<group>"; };
+		AA76ACD928CFB85E0055933B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AA76ACDB28CFBB790055933B /* ColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransformer.swift; sourceTree = "<group>"; };
+		AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "Xbyke-app/Track+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		AA76ACE228CFBCAA0055933B /* Track+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataClass.swift"; path = "Xbyke-app/Track+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AA87AC2728CEFE8D00F0948A /* Xbyke-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xbyke-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +89,7 @@
 		AA87AC3428CEFE8D00F0948A /* Xbyke_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xbyke_app.xcdatamodel; sourceTree = "<group>"; };
 		AA87AC3628CEFE8E00F0948A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA87AC3928CEFE8E00F0948A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AA87AC3B28CEFE8E00F0948A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA87AC3B28CEFE8E00F0948A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Utils/Info.plist; sourceTree = "<group>"; };
 		AA87AC4028CEFE8F00F0948A /* Xbyke-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC4A28CEFE8F00F0948A /* Xbyke-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC4E28CEFE8F00F0948A /* Xbyke_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xbyke_appUITests.swift; sourceTree = "<group>"; };
@@ -79,6 +107,12 @@
 		AAD23F8128CF465E004048CA /* PageItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemViewModel.swift; sourceTree = "<group>"; };
 		AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageItemController+Helpers.swift"; sourceTree = "<group>"; };
+		AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabBar.storyboard; sourceTree = "<group>"; };
+		AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
+		AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewController.swift; sourceTree = "<group>"; };
+		AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xbyke_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbyke-app.debug.xcconfig"; path = "Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BB4B9B90357D27E32B6FB0 /* Pods_Xbyke_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +141,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63A929CB944AFB9A0CE4DFF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA6ABD9928CFCC800005A4D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA6ABDA228CFE3990005A4D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA328CFE3AB0005A4D7 /* CurrentRideViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA6ABDA528CFE9710005A4D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA628CFE97F0005A4D7 /* TrackerRouteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA76ACD828CFB8350055933B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AA76ACD928CFB85E0055933B /* CoreDataStack.swift */,
+				AA76ACE228CFBCAA0055933B /* Track+CoreDataClass.swift */,
+				AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */,
+				AA76ACDB28CFBB790055933B /* ColorTransformer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		AA87AC1E28CEFE8D00F0948A = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +191,8 @@
 				AA87AC4328CEFE8F00F0948A /* Xbyke-appTests */,
 				AA87AC4D28CEFE8F00F0948A /* Xbyke-appUITests */,
 				AA87AC2828CEFE8D00F0948A /* Products */,
+				E67350F084E72FED4D2AC073 /* Pods */,
+				63A929CB944AFB9A0CE4DFF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +209,8 @@
 		AA87AC2928CEFE8D00F0948A /* Xbyke-app */ = {
 			isa = PBXGroup;
 			children = (
+				AA76ACD828CFB8350055933B /* CoreData */,
+				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AAD23F7528CF3502004048CA /* Components */,
 				AA87AC6228CEFF7700F0948A /* Utils */,
 				AA87AC5E28CEFF3F00F0948A /* Module */,
@@ -170,6 +252,7 @@
 		AA87AC5E28CEFF3F00F0948A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AAD38F0628CF628900444FC6 /* HomeTabBar */,
 				AA87AC5D28CEFF3500F0948A /* OnBoarding */,
 			);
 			path = Module;
@@ -182,7 +265,6 @@
 				AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */,
 				AA87AC3628CEFE8E00F0948A /* Assets.xcassets */,
 				AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */,
-				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AA87AC6528CF01C400F0948A /* Enums.swift */,
 				AAD23F6B28CF1F4F004048CA /* Observable.swift */,
 				AAD23F7B28CF3768004048CA /* UIView+Extension.swift */,
@@ -260,6 +342,89 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AAD38F0628CF628900444FC6 /* HomeTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1228CF6DED00444FC6 /* MyProgress */,
+				AAD38F0E28CF696E00444FC6 /* CurrentRide */,
+				AAD38F0728CF629800444FC6 /* TabBarManager */,
+				AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */,
+			);
+			path = HomeTabBar;
+			sourceTree = "<group>";
+		};
+		AAD38F0728CF629800444FC6 /* TabBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0928CF62A400444FC6 /* ViewModel */,
+				AAD38F0828CF629F00444FC6 /* View */,
+			);
+			path = TabBarManager;
+			sourceTree = "<group>";
+		};
+		AAD38F0828CF629F00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD38F0928CF62A400444FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAD38F0E28CF696E00444FC6 /* CurrentRide */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA228CFE3990005A4D7 /* ViewModel */,
+				AAD38F0F28CF697E00444FC6 /* View */,
+			);
+			path = CurrentRide;
+			sourceTree = "<group>";
+		};
+		AAD38F0F28CF697E00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */,
+				AA6ABDAA28CFEC430005A4D7 /* CurrentRideViewController+LocationDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD38F1228CF6DED00444FC6 /* MyProgress */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABDA528CFE9710005A4D7 /* ViewModel */,
+				AA6ABD9928CFCC800005A4D7 /* Model */,
+				AAD38F1328CF6E0F00444FC6 /* View */,
+			);
+			path = MyProgress;
+			sourceTree = "<group>";
+		};
+		AAD38F1328CF6E0F00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */,
+				AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */,
+				AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */,
+				AA6ABDA828CFEB840005A4D7 /* MyProgressViewController+DataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E67350F084E72FED4D2AC073 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */,
+				5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,9 +432,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA87AC5428CEFE8F00F0948A /* Build configuration list for PBXNativeTarget "Xbyke-app" */;
 			buildPhases = (
+				3097AE86CEBF7590B63682C5 /* [CP] Check Pods Manifest.lock */,
 				AA87AC2328CEFE8D00F0948A /* Sources */,
 				AA87AC2428CEFE8D00F0948A /* Frameworks */,
 				AA87AC2528CEFE8D00F0948A /* Resources */,
+				9B22E59E5EEEDAAA4BF2C272 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,6 +531,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6ABD9F28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib in Resources */,
+				AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */,
 				AA87AC3A28CEFE8E00F0948A /* LaunchScreen.storyboard in Resources */,
 				AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */,
 				AA87AC3728CEFE8E00F0948A /* Assets.xcassets in Resources */,
@@ -387,25 +556,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3097AE86CEBF7590B63682C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xbyke-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B22E59E5EEEDAAA4BF2C272 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA87AC2328CEFE8D00F0948A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */,
+				AA76ACDC28CFBB790055933B /* ColorTransformer.swift in Sources */,
 				AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */,
 				AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */,
+				AA76ACDA28CFB85E0055933B /* CoreDataStack.swift in Sources */,
+				AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */,
 				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
+				AA6ABDA728CFE97F0005A4D7 /* TrackerRouteViewModel.swift in Sources */,
 				AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */,
+				AA6ABDAB28CFEC430005A4D7 /* CurrentRideViewController+LocationDelegate.swift in Sources */,
+				AA6ABDA428CFE3AB0005A4D7 /* CurrentRideViewModel.swift in Sources */,
+				AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */,
 				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,
 				AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */,
 				AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */,
 				AA87AC6428CF01A600F0948A /* OBPageViewController.swift in Sources */,
 				AA87AC3528CEFE8D00F0948A /* Xbyke_app.xcdatamodeld in Sources */,
+				AA76ACE328CFBCAA0055933B /* Track+CoreDataProperties.swift in Sources */,
+				AA6ABD9E28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift in Sources */,
+				AA6ABDA928CFEB840005A4D7 /* MyProgressViewController+DataSource.swift in Sources */,
 				AA87AC6628CF01C400F0948A /* Enums.swift in Sources */,
 				AAD23F7A28CF36D8004048CA /* OnBoardingView.swift in Sources */,
 				AAD23F6928CF1E45004048CA /* OBPageViewModel.swift in Sources */,
 				AA87AC2B28CEFE8D00F0948A /* AppDelegate.swift in Sources */,
 				AA87AC2D28CEFE8D00F0948A /* SceneDelegate.swift in Sources */,
+				AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */,
+				AA76ACE428CFBCAA0055933B /* Track+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +804,7 @@
 		};
 		AA87AC5528CEFE8F00F0948A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -588,6 +813,7 @@
 				DEVELOPMENT_TEAM = R96V6F8ZCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xbyke-app/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to access your location?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;
@@ -608,6 +834,7 @@
 		};
 		AA87AC5628CEFE8F00F0948A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -616,6 +843,7 @@
 				DEVELOPMENT_TEAM = R96V6F8ZCQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Xbyke-app/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow to access your location?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = OnBoarding;

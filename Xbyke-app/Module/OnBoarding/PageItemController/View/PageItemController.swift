@@ -24,4 +24,9 @@ class PageItemController: UIViewController {
     func configure(viewModel: PageItemViewModel) {
         self.viewModel = viewModel
     }
+    @IBAction func didPresesGetStarted(_ sender: Any) {
+        let tabBarVC = UIStoryboard(name: "HomeTabBar", bundle: .main).instantiateViewController(withIdentifier: String(describing:  HomeTabBarController.self))
+        tabBarVC.modalPresentationStyle = .fullScreen
+        self.present(tabBarVC, animated: true)
+    }
 }

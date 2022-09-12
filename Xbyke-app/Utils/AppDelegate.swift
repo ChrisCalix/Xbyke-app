@@ -7,14 +7,19 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
+
+let googleApiKey = "AIzaSyCiIu8xjlqbbJ8EBUmCze8U5OMkg0S9lgM"
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    lazy var coreDataStack: CoreDataStack = .init(modelName: "Xbyke_app")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey(googleApiKey)
+        ColorTransformer.register()
         return true
     }
 
