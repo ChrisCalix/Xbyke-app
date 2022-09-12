@@ -15,17 +15,20 @@ class OnBoardingPageViewController: UIPageViewController {
                 instanceOnBoardingViewController(screen: .progress)]
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initUIViews()
-    }
+
 
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
 
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initUIViews()
     }
 
     fileprivate func initUIViews() {
