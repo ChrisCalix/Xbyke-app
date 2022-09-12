@@ -1,0 +1,6 @@
+framework module Pods_Xbyke_app {
+  umbrella header "Pods-Xbyke-app-umbrella.h"
+
+  export *
+  module * { export * }
+}

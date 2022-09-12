@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BB4B9B90357D27E32B6FB0 /* Pods_Xbyke_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */; };
 		AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */; };
 		AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */; };
 		AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbyke-app.release.xcconfig"; path = "Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app.release.xcconfig"; sourceTree = "<group>"; };
 		AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingTest+Helpers.swift"; sourceTree = "<group>"; };
 		AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+DataSource.swift"; sourceTree = "<group>"; };
 		AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTest.swift; sourceTree = "<group>"; };
@@ -87,6 +89,8 @@
 		AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
 		AAD38F1428CF6E5D00444FC6 /* MyProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressViewController.swift; sourceTree = "<group>"; };
+		AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xbyke_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbyke-app.debug.xcconfig"; path = "Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BB4B9B90357D27E32B6FB0 /* Pods_Xbyke_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63A929CB944AFB9A0CE4DFF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA87AC1E28CEFE8D00F0948A = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,8 @@
 				AA87AC4328CEFE8F00F0948A /* Xbyke-appTests */,
 				AA87AC4D28CEFE8F00F0948A /* Xbyke-appUITests */,
 				AA87AC2828CEFE8D00F0948A /* Products */,
+				E67350F084E72FED4D2AC073 /* Pods */,
+				63A929CB944AFB9A0CE4DFF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +351,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E67350F084E72FED4D2AC073 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */,
+				5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,9 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA87AC5428CEFE8F00F0948A /* Build configuration list for PBXNativeTarget "Xbyke-app" */;
 			buildPhases = (
+				3097AE86CEBF7590B63682C5 /* [CP] Check Pods Manifest.lock */,
 				AA87AC2328CEFE8D00F0948A /* Sources */,
 				AA87AC2428CEFE8D00F0948A /* Frameworks */,
 				AA87AC2528CEFE8D00F0948A /* Resources */,
+				9B22E59E5EEEDAAA4BF2C272 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -463,6 +490,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3097AE86CEBF7590B63682C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xbyke-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B22E59E5EEEDAAA4BF2C272 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xbyke-app/Pods-Xbyke-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA87AC2328CEFE8D00F0948A /* Sources */ = {
@@ -660,6 +729,7 @@
 		};
 		AA87AC5528CEFE8F00F0948A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8CB8442BCA49C215B5B26F3 /* Pods-Xbyke-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -688,6 +758,7 @@
 		};
 		AA87AC5628CEFE8F00F0948A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B0A62F091C54D1544FF0D35 /* Pods-Xbyke-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

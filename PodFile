@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Xbyke-app' do
+	use_frameworks!
+
+pod 'GoogleMaps'
+end
