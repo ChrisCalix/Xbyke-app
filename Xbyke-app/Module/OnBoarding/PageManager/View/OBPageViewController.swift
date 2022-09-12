@@ -20,7 +20,7 @@ class OnBoardingPageViewController: UIPageViewController {
         pageControl.numberOfPages = viewModel?.countOfControllers() ?? 0
         pageControl.tintColor = .black
         pageControl.pageIndicatorTintColor = .black
-        pageControl.currentPageIndicatorTintColor = .orange
+        pageControl.currentPageIndicatorTintColor = .white
         pageControl.backgroundColor = .clear
         pageControl.isUserInteractionEnabled = false
         return pageControl
@@ -48,9 +48,9 @@ class OnBoardingPageViewController: UIPageViewController {
     fileprivate func initUIViews() {
         dataSource = self
         delegate = self
-        view.backgroundColor = .systemBackground
         setFirstControllerInPageController(from: viewModel?.firstController())
         view.addSubview(pageControl)
+        view.backgroundColor = .orange
     }
 
 

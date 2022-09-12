@@ -9,21 +9,19 @@ import UIKit
 
 class OBProgressViewController: UIViewController {
 
+    @IBOutlet weak var onboarding: OnBoardingView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .orange
+        onboarding.configureView(screen: .progress, radius: (onboarding.frame.width-30)/2)
     }
+
+    @IBAction func didPressedGetStarted(_ sender: Any) {
+        let tabBarController = UIStoryboard(name: "HomeTrack", bundle: .main).instantiateViewController(withIdentifier: String(describing:  UITabBarController.self))
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(tabBarController, animated: true)
+    }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
