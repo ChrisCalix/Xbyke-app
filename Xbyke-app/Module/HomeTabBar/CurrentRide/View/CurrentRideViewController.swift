@@ -14,6 +14,21 @@ class CurrentRideViewController: UIViewController {
     var locationManager: CLLocationManager!
     @IBOutlet weak var timeLabel: UILabel!
     var currentLocations : [CLLocation] = []
+    var lastLocation : CLLocation?
+    var distanceAccum : Double = 0
+    @IBOutlet weak var distanceLabel: UILabel!
+
+    @IBOutlet weak var timeStoreLabel: UILabel!
+    @IBOutlet weak var storeCard: UIView! {
+        didSet {
+            storeCard.layer.cornerRadius = 25
+            storeCard.layer.shadowRadius = 1
+            storeCard.layer.shadowOpacity = 0.3
+            storeCard.layer.shadowOffset = CGSize(width: 3, height: 3)
+        }
+    }
+    @IBOutlet weak var storeStack: UIStackView!
+
     @IBOutlet weak var timerCard: UIView! {
         didSet {
             timerCard.layer.cornerRadius = 25
@@ -24,7 +39,7 @@ class CurrentRideViewController: UIViewController {
     }
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
-    let path = GMSMutablePath()
+    let paths = GMSMutablePath()
     var timeStart : Date?
     var presstrackRoute = false
     var seconds = 0 //This variable will hold a starting value of seconds. It could be any amount above 0.
@@ -51,15 +66,14 @@ class CurrentRideViewController: UIViewController {
         if timerCard.isHidden {
             timerCard.isHidden = false
             timeLabel.text = "00:00:00"
+            timeStoreLabel.text = "00:00:00"
         }
     }
 
 
 
     func runTimer() {
-        mapView.clear()
 
-        seconds = 0
          timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(CurrentRideViewController.updateTimer)), userInfo: nil, repeats: true)
     }
 
@@ -67,6 +81,7 @@ class CurrentRideViewController: UIViewController {
     @objc func updateTimer() {
         seconds += 1
         timeLabel.text = timeString(time: TimeInterval(seconds))
+        timeStoreLabel.text = timeString(time: TimeInterval(seconds))
     }
 
     @IBAction func didPressedStart(_ sender: Any) {
@@ -79,8 +94,26 @@ class CurrentRideViewController: UIViewController {
         if presstrackRoute {
             presstrackRoute = false
             timer.invalidate()
-            path.removeAllCoordinates()
+            timerCard.isHidden = true
+            storeCard.isHidden = false
+            if distanceAccum >= 1000 {
+                distanceLabel.text = String(format: "%. 2f", distanceAccum/1000) + " km."
+            } else {
+                distanceLabel.text = String(format: "%. 2f", distanceAccum) + " m."
+            }
+
         }
+    }
+
+    @IBAction func didPressedStore(_ sender: Any) {
+        
+    }
+
+    @IBAction func didPressedDelete(_ sender: Any) {
+        mapView.clear()
+        paths.removeAllCoordinates()
+        seconds = 0
+        storeCard.isHidden = true
     }
 
     func checkLocatoinAuthorizationStatus(from manager: CLLocationManager, started: Bool) {
@@ -90,10 +123,11 @@ class CurrentRideViewController: UIViewController {
             manager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
             if started {
+                self.locationManager.startUpdatingLocation()
                 presstrackRoute = true
                 runTimer()
             }
-            self.locationManager.startUpdatingLocation()
+
             self.locationManager.startUpdatingHeading()
 
         default:
@@ -117,10 +151,15 @@ extension CurrentRideViewController: CLLocationManagerDelegate {
             mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17.0)
 
             if presstrackRoute {
-                path.add(location.coordinate)
+                paths.add(location.coordinate)
+
+                if let lastLocation = lastLocation {
+                    distanceAccum += location.distance(from: lastLocation)
+                }
+                lastLocation = location
 
             }
-            let polyline = GMSPolyline(path: path)
+            let polyline = GMSPolyline(path: paths)
             polyline.strokeColor = .red
             polyline.strokeWidth = 5
             polyline.map =  presstrackRoute ? mapView : nil
