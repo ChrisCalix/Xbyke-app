@@ -11,6 +11,7 @@
 		AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */; };
 		AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */; };
 		AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */; };
+		AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */; };
 		AA76ACDA28CFB85E0055933B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACD928CFB85E0055933B /* CoreDataStack.swift */; };
 		AA76ACDC28CFBB790055933B /* ColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACDB28CFBB790055933B /* ColorTransformer.swift */; };
 		AA76ACE328CFBCAA0055933B /* Track+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */; };
@@ -64,6 +65,7 @@
 		AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingTest+Helpers.swift"; sourceTree = "<group>"; };
 		AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+DataSource.swift"; sourceTree = "<group>"; };
 		AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTest.swift; sourceTree = "<group>"; };
+		AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteModel.swift; sourceTree = "<group>"; };
 		AA76ACD928CFB85E0055933B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AA76ACDB28CFBB790055933B /* ColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransformer.swift; sourceTree = "<group>"; };
 		AA76ACE128CFBCAA0055933B /* Track+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Track+CoreDataProperties.swift"; path = "Xbyke-app/Track+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -133,6 +135,14 @@
 				AD2765DDA4A3C3E6C18F9E1C /* Pods_Xbyke_app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA6ABD9928CFCC800005A4D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AA76ACD828CFB8350055933B /* CoreData */ = {
@@ -358,6 +368,7 @@
 		AAD38F1228CF6DED00444FC6 /* MyProgress */ = {
 			isa = PBXGroup;
 			children = (
+				AA6ABD9928CFCC800005A4D7 /* Model */,
 				AAD38F1328CF6E0F00444FC6 /* View */,
 			);
 			path = MyProgress;
@@ -565,6 +576,7 @@
 				AAD38F1528CF6E5D00444FC6 /* MyProgressViewController.swift in Sources */,
 				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
 				AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */,
+				AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */,
 				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,
 				AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */,
 				AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */,
