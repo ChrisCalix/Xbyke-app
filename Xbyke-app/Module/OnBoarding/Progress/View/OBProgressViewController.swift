@@ -18,9 +18,7 @@ class OBProgressViewController: UIViewController {
     }
 
     @IBAction func didPressedGetStarted(_ sender: Any) {
-        let tabBarController = UIStoryboard(name: "HomeTrack", bundle: .main).instantiateViewController(withIdentifier: String(describing:  UITabBarController.self))
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.navigationController?.present(tabBarController, animated: true)
+        
     }
 
     
