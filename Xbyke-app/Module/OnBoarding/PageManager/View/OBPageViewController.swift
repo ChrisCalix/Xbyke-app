@@ -37,18 +37,18 @@ class OnBoardingPageViewController: UIPageViewController {
     fileprivate func initUIViews() {
         dataSource = self
         view.backgroundColor = .systemBackground
-        setFirstControllerInPageController(from: viewModel?.orderedViewControllers.value)
+        setFirstControllerInPageController(from: viewModel?.firstController())
     }
 
 
     fileprivate func initBinds() {
         viewModel?.orderedViewControllers.bind{ controllers in
-            self.setFirstControllerInPageController(from: controllers)
+            self.setFirstControllerInPageController(from: controllers?.first)
         }
     }
 
-    fileprivate func setFirstControllerInPageController(from controllers: [UIViewController]?){
-        guard let firstViewController = controllers?.first else {
+    fileprivate func setFirstControllerInPageController(from controller: UIViewController?){
+        guard let firstViewController = controller else {
             return
         }
         setViewControllers([firstViewController],

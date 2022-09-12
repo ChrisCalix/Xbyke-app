@@ -17,13 +17,6 @@ extension OnBoardingPageViewController: UIPageViewControllerDataSource {
     }
 
     func getNewScreen(type: PaginationFlowTypes, currentScreen viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = viewModel?.orderedViewControllers.value?.firstIndex(of: viewController) else {
-            return nil
-        }
-        let newIndex = type == .before ? currentIndex - 1 : currentIndex + 1
-        guard let controllers = viewModel?.orderedViewControllers.value, controllers.indices.contains(newIndex) else {
-            return nil
-        }
-        return controllers[newIndex]
+        return viewModel?.controllersAtIndex( with: viewController, type: type)
     }
 }
