@@ -38,6 +38,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="GET STARTED!!">
                                     <color key="baseForegroundColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didPresesGetStarted:" destination="GRc-WV-nAr" eventType="touchUpInside" id="y0O-2X-fhR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gY6-8I-Fc5"/>

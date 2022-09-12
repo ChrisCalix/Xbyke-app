@@ -19,6 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         if UserDefaults.standard.bool(forKey: "HideOnBoarding") {
+
+            let rootViewController = UIStoryboard(name: "HomeTabBar", bundle: .main).instantiateViewController(withIdentifier: String(describing: HomeTabBarController.self)) as? HomeTabBarController
+            window = UIWindow(windowScene: windowScene)
+
+            window?.rootViewController = rootViewController
+
+            window?.makeKeyAndVisible()
+        } else {
             let rootViewController = UIStoryboard(name: "OnBoarding", bundle: .main).instantiateViewController(withIdentifier: String(describing: OnBoardingPageViewController.self)) as? OnBoardingPageViewController
             let pageViewModel = OBPageViewModel(screens: [.simpleToUse, .trackerDistanceTime, .progress])
             rootViewController?.configure(viewModel: pageViewModel)
@@ -27,15 +35,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = rootViewController
 
             window?.makeKeyAndVisible()
-        } else {
-
-            let rootViewController = UIStoryboard(name: "HomeTabBar", bundle: .main).instantiateViewController(withIdentifier: String(describing: HomeTabBarController.self)) as? HomeTabBarController
-            window = UIWindow(windowScene: windowScene)
-
-            window?.rootViewController = rootViewController
-
-            window?.makeKeyAndVisible()
-
         }
 
 
