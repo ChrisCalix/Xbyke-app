@@ -22,6 +22,8 @@ enum OnBoardingScreen {
             return String(describing: OBProgressViewController.self)
         }
     }
+
+
 }
 
 enum PaginationFlowTypes {

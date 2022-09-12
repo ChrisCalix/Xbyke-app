@@ -18,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let rootViewController = UIStoryboard(name: "OnBoarding", bundle: .main).instantiateViewController(withIdentifier: String(describing: OnBoardingPageViewController.self))
+        let rootViewController = UIStoryboard(name: "OnBoarding", bundle: .main).instantiateViewController(withIdentifier: String(describing: OnBoardingPageViewController.self)) as? OnBoardingPageViewController
+
+
+        let pageViewModel = OBPageViewModel(screens: [.simpleToUse, .trackerDistanceTime, .progress])
+        rootViewController?.configure(viewModel: pageViewModel)
         //let navController = UINavigationController(rootViewController: rootViewController)
 
         window = UIWindow(windowScene: windowScene)

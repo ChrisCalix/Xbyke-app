@@ -9,18 +9,16 @@ import UIKit
 
 class OnBoardingPageViewController: UIPageViewController {
 
-    internal lazy var orderedViewControllers: [UIViewController] = {
-        return [instanceOnBoardingViewController(screen: .simpleToUse),
-                instanceOnBoardingViewController(screen: .trackerDistanceTime),
-                instanceOnBoardingViewController(screen: .progress)]
-    }()
+    var viewModel : OBPageViewModelProtocol?
 
-
+    init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil, viewModel: OBPageViewModelProtocol) {
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        configure(viewModel: viewModel)
+    }
 
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
-
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -29,23 +27,33 @@ class OnBoardingPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUIViews()
+        initBinds()
+    }
+
+    public func configure(viewModel: OBPageViewModelProtocol) {
+        self.viewModel = viewModel
     }
 
     fileprivate func initUIViews() {
         dataSource = self
         view.backgroundColor = .systemBackground
-        guard let firstViewController = orderedViewControllers.first else {
+        setFirstControllerInPageController(from: viewModel?.orderedViewControllers.value)
+    }
+
+
+    fileprivate func initBinds() {
+        viewModel?.orderedViewControllers.bind{ controllers in
+            self.setFirstControllerInPageController(from: controllers)
+        }
+    }
+
+    fileprivate func setFirstControllerInPageController(from controllers: [UIViewController]?){
+        guard let firstViewController = controllers?.first else {
             return
         }
-
         setViewControllers([firstViewController],
                            direction: .forward,
                            animated: true,
                            completion: nil)
-    }
-
-
-    fileprivate func instanceOnBoardingViewController(screen: OnBoardingScreen) -> UIViewController {
-        return UIStoryboard(name: "OnBoarding", bundle: nil).instantiateViewController(withIdentifier: screen.viewControllerName)
     }
 }

@@ -28,7 +28,7 @@ class OnBoardingTest: XCTestCase {
         let orderedViewControllers = initOnBoardingPagesViewControllers()
         let sut = makeSUT()
 
-        XCTAssertEqual(sut.orderedViewControllers.count, orderedViewControllers.count)
+        XCTAssertEqual(sut.viewModel?.orderedViewControllers.value?.count, orderedViewControllers.count)
     }
 
     func test_next_view_controller_page_index() {

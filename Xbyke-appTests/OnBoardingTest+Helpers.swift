@@ -12,6 +12,8 @@ extension OnBoardingTest {
 
     internal func makeSUT() -> OnBoardingPageViewController {
         let sut = OnBoardingPageViewController()
+        let mockViewModel = OBPageViewModel(controllers: initOnBoardingPagesViewControllers())
+        sut.configure(viewModel: mockViewModel)
         sut.loadViewIfNeeded()
         return sut
     }
@@ -24,11 +26,11 @@ extension OnBoardingTest {
     }
 
     internal func firstController(at pageController: OnBoardingPageViewController) -> OBUseViewController? {
-        return pageController.orderedViewControllers.first as? OBUseViewController
+        return pageController.viewModel?.orderedViewControllers.value?.first as? OBUseViewController
     }
 
     internal func lastController(at pageController: OnBoardingPageViewController) -> OBProgressViewController? {
-        return pageController.orderedViewControllers.last as? OBProgressViewController
+        return pageController.viewModel?.orderedViewControllers.value?.last as? OBProgressViewController
     }
 
     internal func previusController(at pageController: OnBoardingPageViewController, from controller: UIViewController) -> UIViewController? {
