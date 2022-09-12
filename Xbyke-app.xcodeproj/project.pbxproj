@@ -7,16 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */; };
+		AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */; };
+		AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */; };
 		AA87AC2B28CEFE8D00F0948A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */; };
 		AA87AC2D28CEFE8D00F0948A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */; };
-		AA87AC2F28CEFE8D00F0948A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC2E28CEFE8D00F0948A /* ViewController.swift */; };
 		AA87AC3228CEFE8D00F0948A /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA87AC3028CEFE8D00F0948A /* OnBoarding.storyboard */; };
 		AA87AC3528CEFE8D00F0948A /* Xbyke_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC3328CEFE8D00F0948A /* Xbyke_app.xcdatamodeld */; };
 		AA87AC3728CEFE8E00F0948A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA87AC3628CEFE8E00F0948A /* Assets.xcassets */; };
 		AA87AC3A28CEFE8E00F0948A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */; };
-		AA87AC4528CEFE8F00F0948A /* Xbyke_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC4428CEFE8F00F0948A /* Xbyke_appTests.swift */; };
 		AA87AC4F28CEFE8F00F0948A /* Xbyke_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC4E28CEFE8F00F0948A /* Xbyke_appUITests.swift */; };
 		AA87AC5128CEFE8F00F0948A /* Xbyke_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC5028CEFE8F00F0948A /* Xbyke_appUITestsLaunchTests.swift */; };
+		AA87AC6428CF01A600F0948A /* OBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC6328CF01A600F0948A /* OBPageViewController.swift */; };
+		AA87AC6628CF01C400F0948A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC6528CF01C400F0948A /* Enums.swift */; };
+		AAD23F6928CF1E45004048CA /* OBPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */; };
+		AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6B28CF1F4F004048CA /* Observable.swift */; };
+		AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */; };
+		AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */; };
+		AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD23F7728CF3530004048CA /* OnBoardingView.xib */; };
+		AAD23F7A28CF36D8004048CA /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7928CF36D8004048CA /* OnBoardingView.swift */; };
+		AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7B28CF3768004048CA /* UIView+Extension.swift */; };
+		AAD23F7E28CF3EE4004048CA /* OBPageItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7D28CF3EE4004048CA /* OBPageItemTest.swift */; };
+		AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F8128CF465E004048CA /* PageItemController.swift */; };
+		AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */; };
+		AAD38F0528CF5AAE00444FC6 /* OBPageItemController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,20 +51,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingTest+Helpers.swift"; sourceTree = "<group>"; };
+		AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+DataSource.swift"; sourceTree = "<group>"; };
+		AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTest.swift; sourceTree = "<group>"; };
 		AA87AC2728CEFE8D00F0948A /* Xbyke-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xbyke-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA87AC2E28CEFE8D00F0948A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA87AC3128CEFE8D00F0948A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnBoarding.storyboard; sourceTree = "<group>"; };
 		AA87AC3428CEFE8D00F0948A /* Xbyke_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xbyke_app.xcdatamodel; sourceTree = "<group>"; };
 		AA87AC3628CEFE8E00F0948A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA87AC3928CEFE8E00F0948A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA87AC3B28CEFE8E00F0948A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA87AC4028CEFE8F00F0948A /* Xbyke-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA87AC4428CEFE8F00F0948A /* Xbyke_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xbyke_appTests.swift; sourceTree = "<group>"; };
 		AA87AC4A28CEFE8F00F0948A /* Xbyke-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xbyke-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87AC4E28CEFE8F00F0948A /* Xbyke_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xbyke_appUITests.swift; sourceTree = "<group>"; };
 		AA87AC5028CEFE8F00F0948A /* Xbyke_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xbyke_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA87AC6328CF01A600F0948A /* OBPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBPageViewController.swift; sourceTree = "<group>"; };
+		AA87AC6528CF01C400F0948A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBPageViewModel.swift; sourceTree = "<group>"; };
+		AAD23F6B28CF1F4F004048CA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewModel+Protocol.swift"; sourceTree = "<group>"; };
+		AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+Delegate.swift"; sourceTree = "<group>"; };
+		AAD23F7728CF3530004048CA /* OnBoardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnBoardingView.xib; path = ../../../../xbikePruebaConcepto/xbikePruebaConcepto/OnBoardingView.xib; sourceTree = "<group>"; };
+		AAD23F7928CF36D8004048CA /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		AAD23F7B28CF3768004048CA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AAD23F7D28CF3EE4004048CA /* OBPageItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBPageItemTest.swift; sourceTree = "<group>"; };
+		AAD23F8128CF465E004048CA /* PageItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
+		AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemViewModel.swift; sourceTree = "<group>"; };
+		AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageItemController+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +129,9 @@
 		AA87AC2928CEFE8D00F0948A /* Xbyke-app */ = {
 			isa = PBXGroup;
 			children = (
-				AA87AC6228CEFF7700F0948A /* Components */,
+				AAD23F7528CF3502004048CA /* Components */,
+				AA87AC6228CEFF7700F0948A /* Utils */,
 				AA87AC5E28CEFF3F00F0948A /* Module */,
-				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
 				AA87AC3328CEFE8D00F0948A /* Xbyke_app.xcdatamodeld */,
 			);
 			path = "Xbyke-app";
@@ -112,7 +140,10 @@
 		AA87AC4328CEFE8F00F0948A /* Xbyke-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA87AC4428CEFE8F00F0948A /* Xbyke_appTests.swift */,
+				AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */,
+				AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */,
+				AAD23F7D28CF3EE4004048CA /* OBPageItemTest.swift */,
+				AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */,
 			);
 			path = "Xbyke-appTests";
 			sourceTree = "<group>";
@@ -129,7 +160,9 @@
 		AA87AC5D28CEFF3500F0948A /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				AA87AC6128CEFF6B00F0948A /* View */,
+				AAD23F7F28CF45A8004048CA /* PageItemController */,
+				AA87AC6D28CF024500F0948A /* PageManager */,
+				AA87AC3028CEFE8D00F0948A /* OnBoarding.storyboard */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -142,24 +175,89 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		AA87AC6128CEFF6B00F0948A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AA87AC2E28CEFE8D00F0948A /* ViewController.swift */,
-				AA87AC3028CEFE8D00F0948A /* OnBoarding.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		AA87AC6228CEFF7700F0948A /* Components */ = {
+		AA87AC6228CEFF7700F0948A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				AA87AC2A28CEFE8D00F0948A /* AppDelegate.swift */,
 				AA87AC2C28CEFE8D00F0948A /* SceneDelegate.swift */,
 				AA87AC3628CEFE8E00F0948A /* Assets.xcassets */,
 				AA87AC3828CEFE8E00F0948A /* LaunchScreen.storyboard */,
+				AA87AC3B28CEFE8E00F0948A /* Info.plist */,
+				AA87AC6528CF01C400F0948A /* Enums.swift */,
+				AAD23F6B28CF1F4F004048CA /* Observable.swift */,
+				AAD23F7B28CF3768004048CA /* UIView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AA87AC6D28CF024500F0948A /* PageManager */ = {
+			isa = PBXGroup;
+			children = (
+				AAD23F6728CF1E34004048CA /* ViewModel */,
+				AA87AC6E28CF026A00F0948A /* View */,
+			);
+			path = PageManager;
+			sourceTree = "<group>";
+		};
+		AA87AC6E28CF026A00F0948A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA87AC6328CF01A600F0948A /* OBPageViewController.swift */,
+				AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */,
+				AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD23F6728CF1E34004048CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */,
+				AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAD23F7528CF3502004048CA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AAD23F7628CF3513004048CA /* CustomViews */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AAD23F7628CF3513004048CA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AAD23F7728CF3530004048CA /* OnBoardingView.xib */,
+				AAD23F7928CF36D8004048CA /* OnBoardingView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		AAD23F7F28CF45A8004048CA /* PageItemController */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0128CF4B1500444FC6 /* ViewModel */,
+				AAD23F8028CF45E1004048CA /* View */,
+			);
+			path = PageItemController;
+			sourceTree = "<group>";
+		};
+		AAD23F8028CF45E1004048CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD23F8128CF465E004048CA /* PageItemController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD38F0128CF4B1500444FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA87AC3A28CEFE8E00F0948A /* LaunchScreen.storyboard in Resources */,
+				AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */,
 				AA87AC3728CEFE8E00F0948A /* Assets.xcassets in Resources */,
 				AA87AC3228CEFE8D00F0948A /* OnBoarding.storyboard in Resources */,
 			);
@@ -293,8 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA87AC2F28CEFE8D00F0948A /* ViewController.swift in Sources */,
+				AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */,
+				AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */,
+				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
+				AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */,
+				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,
+				AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */,
+				AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */,
+				AA87AC6428CF01A600F0948A /* OBPageViewController.swift in Sources */,
 				AA87AC3528CEFE8D00F0948A /* Xbyke_app.xcdatamodeld in Sources */,
+				AA87AC6628CF01C400F0948A /* Enums.swift in Sources */,
+				AAD23F7A28CF36D8004048CA /* OnBoardingView.swift in Sources */,
+				AAD23F6928CF1E45004048CA /* OBPageViewModel.swift in Sources */,
 				AA87AC2B28CEFE8D00F0948A /* AppDelegate.swift in Sources */,
 				AA87AC2D28CEFE8D00F0948A /* SceneDelegate.swift in Sources */,
 			);
@@ -304,7 +413,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA87AC4528CEFE8F00F0948A /* Xbyke_appTests.swift in Sources */,
+				AAD38F0528CF5AAE00444FC6 /* OBPageItemController+Helpers.swift in Sources */,
+				AAD23F7E28CF3EE4004048CA /* OBPageItemTest.swift in Sources */,
+				AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */,
+				AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
