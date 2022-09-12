@@ -11,11 +11,6 @@ class OnBoardingPageViewController: UIPageViewController {
 
     var viewModel : OBPageViewModelProtocol?
 
-    init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil, viewModel: OBPageViewModelProtocol) {
-        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        configure(viewModel: viewModel)
-    }
-
     override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
