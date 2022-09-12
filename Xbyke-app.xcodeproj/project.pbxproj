@@ -33,6 +33,7 @@
 		AAD38F0528CF5AAE00444FC6 /* OBPageItemController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */; };
 		AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */; };
 		AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */; };
+		AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageItemController+Helpers.swift"; sourceTree = "<group>"; };
 		AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabBar.storyboard; sourceTree = "<group>"; };
 		AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 		AAD38F0628CF628900444FC6 /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				AAD38F0E28CF696E00444FC6 /* CurrentRide */,
 				AAD38F0728CF629800444FC6 /* TabBarManager */,
 				AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */,
 			);
@@ -296,6 +299,22 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAD38F0E28CF696E00444FC6 /* CurrentRide */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0F28CF697E00444FC6 /* View */,
+			);
+			path = CurrentRide;
+			sourceTree = "<group>";
+		};
+		AAD38F0F28CF697E00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F1028CF699900444FC6 /* CurrentRideViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD38F1128CF699900444FC6 /* CurrentRideViewController.swift in Sources */,
 				AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */,
 				AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */,
 				AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */,
