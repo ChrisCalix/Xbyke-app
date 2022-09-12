@@ -21,4 +21,9 @@ class OnBoardingTest: XCTestCase {
         let sut = OnBoardingPageViewController()
         XCTAssertEqual(sut.transitionStyle, .scroll)
     }
+
+    func test_init_sets_preferred_navigation_orientation() {
+        let sut = OnBoardingPageViewController()
+        XCTAssertEqual(sut.navigationOrientation, .horizontal)
+    }
 }
