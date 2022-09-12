@@ -15,6 +15,17 @@ class OnBoardingPageViewController: UIPageViewController {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
 
+    internal lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.numberOfPages = viewModel?.countOfControllers() ?? 0
+        pageControl.tintColor = .black
+        pageControl.pageIndicatorTintColor = .black
+        pageControl.currentPageIndicatorTintColor = .orange
+        pageControl.backgroundColor = .clear
+        pageControl.isUserInteractionEnabled = false
+        return pageControl
+    }()
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -25,14 +36,21 @@ class OnBoardingPageViewController: UIPageViewController {
         initBinds()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pageControl.frame = CGRect(x: 10, y: view.frame.size.height-100, width: view.frame.size.width-20, height: 70)
+    }
+
     public func configure(viewModel: OBPageViewModelProtocol) {
         self.viewModel = viewModel
     }
 
     fileprivate func initUIViews() {
         dataSource = self
+        delegate = self
         view.backgroundColor = .systemBackground
         setFirstControllerInPageController(from: viewModel?.firstController())
+        view.addSubview(pageControl)
     }
 
 

@@ -25,6 +25,8 @@
 		AA87AC7428CF041E00F0948A /* OBUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87AC7328CF041E00F0948A /* OBUseViewController.swift */; };
 		AAD23F6928CF1E45004048CA /* OBPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */; };
 		AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6B28CF1F4F004048CA /* Observable.swift */; };
+		AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */; };
+		AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AA87AC7328CF041E00F0948A /* OBUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBUseViewController.swift; sourceTree = "<group>"; };
 		AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBPageViewModel.swift; sourceTree = "<group>"; };
 		AAD23F6B28CF1F4F004048CA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewModel+Protocol.swift"; sourceTree = "<group>"; };
+		AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,7 @@
 			children = (
 				AA87AC6328CF01A600F0948A /* OBPageViewController.swift */,
 				AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */,
+				AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				AAD23F6828CF1E45004048CA /* OBPageViewModel.swift */,
+				AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */,
 				AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */,
 				AA87AC7228CF03E900F0948A /* OBTrackerViewController.swift in Sources */,
+				AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */,
 				AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */,
 				AA87AC7428CF041E00F0948A /* OBUseViewController.swift in Sources */,
 				AA87AC6428CF01A600F0948A /* OBPageViewController.swift in Sources */,

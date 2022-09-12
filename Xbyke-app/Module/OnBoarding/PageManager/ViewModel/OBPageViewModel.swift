@@ -8,15 +8,6 @@
 import Foundation
 import UIKit
 
-protocol OBPageViewModelProtocol {
-
-    var orderedViewControllers: Observable<[UIViewController]> { get }
-
-    func firstController() -> UIViewController?
-
-    func controllersAtIndex(with controller: UIViewController, type: PaginationFlowTypes) -> UIViewController?
-}
-
 class OBPageViewModel: OBPageViewModelProtocol {
 
     var orderedViewControllers: Observable<[UIViewController]>
@@ -44,5 +35,17 @@ class OBPageViewModel: OBPageViewModelProtocol {
             return nil
         }
         return orderedViewControllers.value?[newIndex]
+    }
+
+    func countOfControllers() -> Int? {
+        return self.orderedViewControllers.value?.count
+    }
+
+    func currentPageAtIndex(of pageViewController: UIPageViewController) -> Array<UIViewController>.Index? {
+
+        guard let pageContentViewController = pageViewController.viewControllers?.first, let currentPage = orderedViewControllers.value?.firstIndex(of: pageContentViewController) else {
+            return nil
+        }
+        return currentPage
     }
 }
