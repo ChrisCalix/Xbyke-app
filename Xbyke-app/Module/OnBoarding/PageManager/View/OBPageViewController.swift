@@ -51,6 +51,7 @@ class OnBoardingPageViewController: UIPageViewController {
         setFirstControllerInPageController(from: viewModel?.firstController())
         view.addSubview(pageControl)
         view.backgroundColor = .orange
+        UserDefaults.standard.set(false, forKey: "HideOnBoarding")
     }
 
 

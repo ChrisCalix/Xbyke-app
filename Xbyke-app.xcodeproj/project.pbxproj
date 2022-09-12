@@ -31,6 +31,8 @@
 		AAD23F8228CF465E004048CA /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F8128CF465E004048CA /* PageItemController.swift */; };
 		AAD38F0328CF4B2600444FC6 /* PageItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */; };
 		AAD38F0528CF5AAE00444FC6 /* OBPageItemController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */; };
+		AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */; };
+		AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		AAD23F8128CF465E004048CA /* PageItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemViewModel.swift; sourceTree = "<group>"; };
 		AAD38F0428CF5AAE00444FC6 /* OBPageItemController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageItemController+Helpers.swift"; sourceTree = "<group>"; };
+		AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTabBar.storyboard; sourceTree = "<group>"; };
+		AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 		AA87AC5E28CEFF3F00F0948A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				AAD38F0628CF628900444FC6 /* HomeTabBar */,
 				AA87AC5D28CEFF3500F0948A /* OnBoarding */,
 			);
 			path = Module;
@@ -256,6 +261,39 @@
 			isa = PBXGroup;
 			children = (
 				AAD38F0228CF4B2600444FC6 /* PageItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAD38F0628CF628900444FC6 /* HomeTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0728CF629800444FC6 /* TabBarManager */,
+				AAD38F0A28CF62C000444FC6 /* HomeTabBar.storyboard */,
+			);
+			path = HomeTabBar;
+			sourceTree = "<group>";
+		};
+		AAD38F0728CF629800444FC6 /* TabBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0928CF62A400444FC6 /* ViewModel */,
+				AAD38F0828CF629F00444FC6 /* View */,
+			);
+			path = TabBarManager;
+			sourceTree = "<group>";
+		};
+		AAD38F0828CF629F00444FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAD38F0C28CF64DA00444FC6 /* HomeTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAD38F0928CF62A400444FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -364,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */,
 				AA87AC3A28CEFE8E00F0948A /* LaunchScreen.storyboard in Resources */,
 				AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */,
 				AA87AC3728CEFE8E00F0948A /* Assets.xcassets in Resources */,
@@ -406,6 +445,7 @@
 				AAD23F6928CF1E45004048CA /* OBPageViewModel.swift in Sources */,
 				AA87AC2B28CEFE8D00F0948A /* AppDelegate.swift in Sources */,
 				AA87AC2D28CEFE8D00F0948A /* SceneDelegate.swift in Sources */,
+				AAD38F0D28CF64DA00444FC6 /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
