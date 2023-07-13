@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingView" customModule="Xbyke_app" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundIcon" destination="FzW-q6-sBK" id="kmr-57-Mvz"/>
+                <outlet property="icon" destination="tTZ-JR-LdT" id="G2o-hK-39R"/>
+                <outlet property="text" destination="Sw6-0j-acO" id="7LO-mC-Ot2"/>
+                <outlet property="view" destination="HiJ-QA-7JZ" id="zfJ-Pu-pwV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleAspectFit" id="HiJ-QA-7JZ">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzW-q6-sBK">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track" translatesAutoresizingMaskIntoConstraints="NO" id="tTZ-JR-LdT">
+                            <rect key="frame" x="32" y="33" width="310" height="309"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="tTZ-JR-LdT" firstAttribute="leading" secondItem="FzW-q6-sBK" secondAttribute="leading" constant="32" id="NMk-ZI-OiX"/>
+                        <constraint firstAttribute="trailing" secondItem="tTZ-JR-LdT" secondAttribute="trailing" constant="32" id="Xr8-Wg-QWk"/>
+                        <constraint firstItem="tTZ-JR-LdT" firstAttribute="top" secondItem="FzW-q6-sBK" secondAttribute="top" constant="33" id="p0Y-Tg-1X9"/>
+                        <constraint firstAttribute="width" secondItem="FzW-q6-sBK" secondAttribute="height" multiplier="1:1" id="uiX-E6-XGR"/>
+                        <constraint firstAttribute="bottom" secondItem="tTZ-JR-LdT" secondAttribute="bottom" constant="32" id="zgZ-1C-8bi"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extremely simple to use" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw6-0j-acO">
+                    <rect key="frame" x="0.0" y="390" width="374" height="32.5"/>
+                    <color key="tintColor" red="0.94509803920000002" green="0.35294117650000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FzW-q6-sBK" firstAttribute="leading" secondItem="HiJ-QA-7JZ" secondAttribute="leading" id="IQ8-a0-9q2"/>
+                <constraint firstItem="Sw6-0j-acO" firstAttribute="top" secondItem="FzW-q6-sBK" secondAttribute="bottom" constant="16" id="KnW-du-Cuo"/>
+                <constraint firstItem="FzW-q6-sBK" firstAttribute="top" secondItem="HiJ-QA-7JZ" secondAttribute="top" id="NXb-Uf-KtA"/>
+                <constraint firstAttribute="trailing" secondItem="FzW-q6-sBK" secondAttribute="trailing" id="QBm-gW-v0l"/>
+                <constraint firstAttribute="trailing" secondItem="Sw6-0j-acO" secondAttribute="trailing" id="crM-se-s17"/>
+                <constraint firstItem="Sw6-0j-acO" firstAttribute="leading" secondItem="HiJ-QA-7JZ" secondAttribute="leading" id="pPf-1x-sdn"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Sw6-0j-acO" secondAttribute="bottom" constant="16" id="r5r-9A-3WD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="828" y="11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="track" width="1050" height="750.8699951171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

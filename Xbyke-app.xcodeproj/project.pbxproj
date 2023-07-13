@@ -11,6 +11,7 @@
 		AA171C5C28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */; };
 		AA2E2E8028CF06CC00257390 /* OBPageViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */; };
 		AA2E2E8428CF097F00257390 /* OnBoardingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */; };
+		AA570BD12A6069B800F7731D /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA570BD02A6069B800F7731D /* OnBoardingView.xib */; };
 		AA6ABD9B28CFCC940005A4D7 /* TrackerRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */; };
 		AA6ABD9E28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */; };
 		AA6ABD9F28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */; };
@@ -36,7 +37,6 @@
 		AAD23F6C28CF1F4F004048CA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6B28CF1F4F004048CA /* Observable.swift */; };
 		AAD23F6E28CF2D5B004048CA /* OBPageViewModel+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */; };
 		AAD23F7028CF2F02004048CA /* OBPageViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */; };
-		AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD23F7728CF3530004048CA /* OnBoardingView.xib */; };
 		AAD23F7A28CF36D8004048CA /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7928CF36D8004048CA /* OnBoardingView.swift */; };
 		AAD23F7C28CF3768004048CA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7B28CF3768004048CA /* UIView+Extension.swift */; };
 		AAD23F7E28CF3EE4004048CA /* OBPageItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD23F7D28CF3EE4004048CA /* OBPageItemTest.swift */; };
@@ -71,6 +71,7 @@
 		AA171C5B28CF0F95006CA0F1 /* OnBoardingTest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnBoardingTest+Helpers.swift"; sourceTree = "<group>"; };
 		AA2E2E7F28CF06CC00257390 /* OBPageViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+DataSource.swift"; sourceTree = "<group>"; };
 		AA2E2E8328CF097F00257390 /* OnBoardingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTest.swift; sourceTree = "<group>"; };
+		AA570BD02A6069B800F7731D /* OnBoardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		AA6ABD9A28CFCC940005A4D7 /* TrackerRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteModel.swift; sourceTree = "<group>"; };
 		AA6ABD9C28CFD1220005A4D7 /* TrackerRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRouteTableViewCell.swift; sourceTree = "<group>"; };
 		AA6ABD9D28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackerRouteTableViewCell.xib; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		AAD23F6B28CF1F4F004048CA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		AAD23F6D28CF2D5B004048CA /* OBPageViewModel+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewModel+Protocol.swift"; sourceTree = "<group>"; };
 		AAD23F6F28CF2F02004048CA /* OBPageViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OBPageViewController+Delegate.swift"; sourceTree = "<group>"; };
-		AAD23F7728CF3530004048CA /* OnBoardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnBoardingView.xib; path = ../../../../xbikePruebaConcepto/xbikePruebaConcepto/OnBoardingView.xib; sourceTree = "<group>"; };
 		AAD23F7928CF36D8004048CA /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AAD23F7B28CF3768004048CA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AAD23F7D28CF3EE4004048CA /* OBPageItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBPageItemTest.swift; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 		AAD23F7628CF3513004048CA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				AAD23F7728CF3530004048CA /* OnBoardingView.xib */,
+				AA570BD02A6069B800F7731D /* OnBoardingView.xib */,
 				AAD23F7928CF36D8004048CA /* OnBoardingView.swift */,
 			);
 			path = CustomViews;
@@ -532,9 +532,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6ABD9F28CFD1220005A4D7 /* TrackerRouteTableViewCell.xib in Resources */,
+				AA570BD12A6069B800F7731D /* OnBoardingView.xib in Resources */,
 				AAD38F0B28CF62C000444FC6 /* HomeTabBar.storyboard in Resources */,
 				AA87AC3A28CEFE8E00F0948A /* LaunchScreen.storyboard in Resources */,
-				AAD23F7828CF3530004048CA /* OnBoardingView.xib in Resources */,
 				AA87AC3728CEFE8E00F0948A /* Assets.xcassets in Resources */,
 				AA87AC3228CEFE8D00F0948A /* OnBoarding.storyboard in Resources */,
 			);
