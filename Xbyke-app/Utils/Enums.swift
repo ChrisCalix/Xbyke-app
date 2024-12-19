@@ -4,7 +4,7 @@
 //
 //  Created by Christian Calixto on 12/9/22.
 //
-// asdaffwef awfeawefaawefawe
+// asdaffwef 
 import Foundation
 
 enum OnBoardingScreen {
